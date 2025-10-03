@@ -1,4 +1,8 @@
 FROM mcp/neo4j-memory:latest
 
-# Use the image's default entrypoint/command
-# Don't override with our own CMD
+# Set working directory
+WORKDIR /app
+
+# The image should have its own entrypoint defined
+# We just need to expose the port
+EXPOSE 3000
